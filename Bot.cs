@@ -9,12 +9,17 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using StealthhyyBot.Commands;
+using DSharpPlus.Interactivity;
+using DSharpPlus.Interactivity.Extensions;
 
 namespace StealthhyyBot
 {
     class Bot
     {
         public DiscordClient _client { get; private set; }
+
+        public InteractivityExtension _interactivity { get; private set; }
+
         public CommandsNextExtension _commands { get; private set; }
 
         public async Task RunAsync()
@@ -42,6 +47,13 @@ namespace StealthhyyBot
             _client = new DiscordClient(config);
 
             _client.Ready += OnClientReady;
+
+            _client.UseInteractivity(new InteractivityConfiguration
+            {
+
+            });
+
+
 
             var commandsConfig = new CommandsNextConfiguration
             {

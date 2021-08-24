@@ -1,5 +1,6 @@
 ﻿using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
+using DSharpPlus.Interactivity.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,10 +10,24 @@ namespace StealthhyyBot.Commands
 {
     public class DnDCommands : BaseCommandModule
     {
-        [Command("ping")]
-        public async Task Ping(CommandContext ctx)
+        [Command("respondmessage")]
+        public async Task RespondMessage(CommandContext ctx)
         {
-            await ctx.Channel.SendMessageAsync("Pong");
+            var interactivity = ctx.Client.GetInteractivity();
+
+            var message = await interactivity.WaitForMessageAsync(x => x.Channel == ctx.Channel);
+
+            await ctx.Channel.SendMessageAsync(message.Result.Content);
+        }
+
+        [Command("respondreaction")]
+        public async Task RespondReaction(CommandContext ctx)
+        {
+            var interactivity = ctx.Client.GetInteractivity();
+
+            var message = await interactivity.WaitForReactionAsync(x => x.Channel == ctx.Channel);
+
+            await ctx.Channel.SendMessageAsync(message.Result.Emoji);
         }
     }
 }
