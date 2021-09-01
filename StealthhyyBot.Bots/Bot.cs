@@ -12,7 +12,7 @@ using StealthhyyBot.Commands;
 using DSharpPlus.Interactivity;
 using DSharpPlus.Interactivity.Extensions;
 
-namespace StealthhyyBot
+namespace StealthhyyBot.Bots
 {
     class Bot
     {

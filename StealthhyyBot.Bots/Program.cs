@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StealthhyyBot.Bots;
+using System;
 
 namespace StealthhyyBot
 {
