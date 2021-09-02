@@ -22,7 +22,7 @@ namespace StealthhyyBot.Bots
 
         public CommandsNextExtension _commands { get; private set; }
 
-        public async Task RunAsync()
+        public Bot(IServiceProvider services)
         {
             var json = string.Empty;
 
@@ -30,7 +30,7 @@ namespace StealthhyyBot.Bots
             {
                 using (var sr = new StreamReader(fs, new UTF8Encoding(false)))
                 {
-                    json = await sr.ReadToEndAsync().ConfigureAwait(false);
+                    json = sr.ReadToEnd();
                 }
             }
 
@@ -61,15 +61,14 @@ namespace StealthhyyBot.Bots
                 EnableMentionPrefix = true,
                 EnableDms = false,
                 DmHelp = true,
+                Services = services
             };
 
             _commands = _client.UseCommandsNext(commandsConfig);
 
             _commands.RegisterCommands<DnDCommands>();
 
-            await _client.ConnectAsync();
-
-            await Task.Delay(-1);
+            _client.ConnectAsync();
         }
 
         private Task OnClientReady(DiscordClient c, ReadyEventArgs e)

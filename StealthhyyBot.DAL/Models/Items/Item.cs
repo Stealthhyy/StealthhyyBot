@@ -4,8 +4,9 @@ using System.Text;
 
 namespace StealthhyyBot.DAL.Models.Items
 {
-    class Item : Entity
+    public class Item : Entity
     {
-
+        public string Name { get; set; }
+        public string Description { get; set; }
     }
 }
