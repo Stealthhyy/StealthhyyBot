@@ -26,6 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\StealthhyyBot.Core\StealthhyyBot.Core.csproj" />
     <ProjectReference Include="..\StealthhyyBot.DAL.Migrations\StealthhyyBot.DAL.Migrations.csproj" />
     <ProjectReference Include="..\StealthhyyBot.DAL\StealthhyyBot.DAL.csproj" />
   </ItemGroup>

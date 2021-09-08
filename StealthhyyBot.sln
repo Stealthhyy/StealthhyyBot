@@ -12,7 +12,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StealthhyyBot.DAL", "Stealt
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StealthhyyBot.DAL", "StealthhyyBot.DAL\StealthhyyBot.DAL.csproj", "{17559262-1D3B-4018-BDE4-3F16A901DAC4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StealthhyyBot.DAL.Migrations", "StealthhyyBot.DAL.Migrations\StealthhyyBot.DAL.Migrations.csproj", "{7CA07C0C-0516-4BAB-922F-9AAE9D195032}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StealthhyyBot.DAL.Migrations", "StealthhyyBot.DAL.Migrations\StealthhyyBot.DAL.Migrations.csproj", "{7CA07C0C-0516-4BAB-922F-9AAE9D195032}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StealthhyyBot.Core", "StealthhyyBot.Core", "{DC072302-AE87-47E8-8625-D58E13F79DE9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StealthhyyBot.Core", "StealthhyyBot.Core\StealthhyyBot.Core.csproj", "{6C5A680C-2994-489E-90E2-0A20E517987A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +36,10 @@ Global
 		{7CA07C0C-0516-4BAB-922F-9AAE9D195032}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CA07C0C-0516-4BAB-922F-9AAE9D195032}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7CA07C0C-0516-4BAB-922F-9AAE9D195032}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C5A680C-2994-489E-90E2-0A20E517987A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C5A680C-2994-489E-90E2-0A20E517987A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C5A680C-2994-489E-90E2-0A20E517987A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C5A680C-2994-489E-90E2-0A20E517987A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +47,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{17559262-1D3B-4018-BDE4-3F16A901DAC4} = {65080C5B-DC5E-4B67-BCE8-2735D536FD60}
 		{7CA07C0C-0516-4BAB-922F-9AAE9D195032} = {65080C5B-DC5E-4B67-BCE8-2735D536FD60}
+		{6C5A680C-2994-489E-90E2-0A20E517987A} = {DC072302-AE87-47E8-8625-D58E13F79DE9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {424A7975-16DA-429B-986D-515D3ED8495B}

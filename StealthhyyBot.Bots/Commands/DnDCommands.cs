@@ -5,6 +5,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using StealthhyyBot.DAL;
+using StealthhyyBot.Bots;
 
 namespace StealthhyyBot.Commands
 {
@@ -28,6 +30,12 @@ namespace StealthhyyBot.Commands
             var message = await interactivity.WaitForReactionAsync(x => x.Channel == ctx.Channel);
 
             await ctx.Channel.SendMessageAsync(message.Result.Emoji);
+        }
+
+        [Command("additem")]
+        public async Task AddItem(CommandContext ctx, string name)
+        {
+            //await _contex
         }
     }
 }
